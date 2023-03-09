@@ -85,6 +85,13 @@ const all_show = () =>{
     loadData(text)
 }
 
+document.getElementById('search_text').addEventListener('keypress', function (e) {
+    console.log(e.key)
+    if (e.key === 'Enter') {
+        search_input()
+    }
+});
+
 const show_btn = async(details) =>{
      const url = `https://openapi.programming-hero.com/api/phone/${details}`
      const modal_box = document.getElementById("detailsBody")
